@@ -1,0 +1,48 @@
+Check 'Home_assignment_3.5_Form' with this prompt:
+{
+    "rules": [
+      "1. Compare the students' 'SQL Code' in 'Home_assignment_3.5_Form' to the corresponding 'Right answers'.",
+      "2. Add 'Check' item for each task. Write 'Correct' if the student's SQL code matches any of the variants in 'Right answers'. Otherwise, write 'Incorrect'.",
+      "3. Add 'Explanation' item for each incorrect task. In it, provide specific feedback about what key elements are missing or incorrect in the SQL Code. Do not quote directly from the 'Right answers'.",
+      "4. Do not change or remove any other existing items in the 'Home_assignment_3.5_Form'."
+    ],
+  "Right answers": [
+  {
+  "Task 1": {
+  "variants": [
+  "SELECT show_id, CASE WHEN dir = '-' THEN 'Not Given' ELSE INITCAP(dir) END AS director, CASE WHEN ctry = '-' THEN 'Not Given' ELSE INITCAP(ctry) END AS country FROM movies ORDER BY show_id;",
+  "SELECT show_id, CASE WHEN dir = '-' THEN 'Not Given' ELSE INITCAP(dir) END AS director, CASE WHEN ctry = '-' THEN 'Not Given' ELSE INITCAP(ctry) END AS country FROM movies ORDER BY show_id ASC;",
+  "SELECT show_id, CASE WHEN dir = '-' THEN 'Not Given' ELSE INITCAP(dir) END AS director, CASE WHEN ctry = '-' THEN 'Not Given' ELSE INITCAP(ctry) END AS country FROM movies ORDER BY 1;"
+  ]
+  },
+  "Task 2": {
+  "variants": [
+  "SELECT show_id, date_added, TO_CHAR(date_added, 'Mon') AS month_added FROM movies ORDER BY show_id;",
+  "SELECT show_id, date_added, TO_CHAR(date_added, 'Mon') AS month_added FROM movies ORDER BY show_id ASC;",
+  "SELECT show_id, date_added, TO_CHAR(date_added, 'Mon') AS month_added FROM movies ORDER BY 1;"
+  ]
+  },
+  "Task 3": {
+  "variants": [
+  "SELECT show_id, duration, CASE WHEN duration ILIKE '%min' THEN 'Movie' ELSE 'TV Series' END AS title_type FROM movies ORDER BY show_id;",
+  "SELECT show_id, duration, CASE WHEN duration ILIKE '%min' THEN 'Movie' ELSE 'TV Series' END AS title_type FROM movies ORDER BY show_id ASC;",
+  "SELECT show_id, duration, CASE WHEN duration ILIKE '%min' THEN 'Movie' ELSE 'TV Series' END AS title_type FROM movies ORDER BY 1;",
+  "SELECT show_id, duration, CASE WHEN duration LIKE '%min%' THEN 'Movie' ELSE 'TV Series' END AS title_type FROM movies ORDER BY show_id;"
+  ]
+  },
+  "Task 4": {
+  "variants": [
+  "SELECT show_id, rating_1, rating_2, CONCAT(rating_1, '-', rating_2) AS rating FROM movies ORDER BY show_id;",
+  "SELECT show_id, rating_1, rating_2, CONCAT(rating_1, '-', rating_2) AS rating FROM movies ORDER BY show_id ASC;",
+  "SELECT show_id, rating_1, rating_2, CONCAT(rating_1, '-', rating_2) AS rating FROM movies ORDER BY 1;"
+  ]
+  },
+  "Task 5": {
+  "variants": [
+  "SELECT show_id, CASE WHEN dir = '-' THEN 'Not Given' ELSE INITCAP(dir) END AS director, CASE WHEN ctry = '-' THEN 'Not Given' ELSE INITCAP(ctry) END AS country FROM movies ORDER BY show_id;",
+  "SELECT show_id, CASE WHEN dir = '-' THEN 'Not Given' ELSE INITCAP(dir) END AS director, CASE WHEN ctry = '-' THEN 'Not Given' ELSE INITCAP(ctry) END AS country FROM movies ORDER BY show_id ASC;",
+  "SELECT show_id, CASE WHEN dir = '-' THEN 'Not Given' ELSE INITCAP(dir) END AS director, CASE WHEN ctry = '-' THEN 'Not Given' ELSE INITCAP(ctry) END AS country FROM movies ORDER BY 1;"
+  ]
+  }
+  }
+  ],
